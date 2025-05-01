@@ -31,7 +31,7 @@ Configuration required to startup Zigbee2MQTT is available from the add-on confi
   ```yaml
   enabled: false
   master: pty,raw,echo=0,link=/tmp/ttyZ2M,mode=777
-  slave: tcp-listen:8485,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5
+  slave: tcp-listen:8486,keepalive,nodelay,reuseaddr,keepidle=1,keepintvl=1,keepcnt=5
   options: "-d -d"
   log: false
   ```
@@ -85,4 +85,4 @@ You can configure the socat module within the socat section using the following 
 - `options` extra options added to the socat command line (optional)
 - `log` true/false if to log the socat stdout/stderr to data_path/socat.log (default: false)
 
-**NOTE:** You'll have to change both the `master` and the `slave` options according to your needs. The defaults values will make sure that socat listens on port `8485` and redirects its output to `/dev/ttyZ2M`. The zigbee2mqtt's serial port setting is NOT automatically set and has to be changed accordingly.
+**NOTE:** You'll have to change both the `master` and the `slave` options according to your needs. The defaults values will make sure that socat listens on port `8486` and redirects its output to `/dev/ttyZ2M`. The zigbee2mqtt's serial port setting is NOT automatically set and has to be changed accordingly.
